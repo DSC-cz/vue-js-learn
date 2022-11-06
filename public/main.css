@@ -1,0 +1,45 @@
+body{
+  background-color: var(--bs-primary);
+}
+nav{
+  background-color: var(--bs-gray-800);
+  width: 100%;
+  padding: 10px 5px 20px 5px;
+  text-align: center;
+}
+
+nav a{
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: var(--bs-gray-400);
+}
+
+.container{
+  background: white;
+  color: black;
+  padding: 20px;
+  width: 50%;
+  min-height: 200px;
+  max-height: 700px;
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table tr td:nth-child(1){
+  width: 90%;   
+}
+
+@media only screen and (max-width: 768px){
+  .container{
+    width:90%;
+    min-height: 100px;
+    max-height: 100%;
+  }
+}
