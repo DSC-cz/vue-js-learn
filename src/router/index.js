@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TodoView from '../views/TodoView.vue'
+import CalcView from '../views/CalcView.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/todo',
     name: 'todo',
     component: TodoView
+  },
+  {
+    path: '/calc',
+    name: 'calc',
+    component: CalcView
   }
 ]
 

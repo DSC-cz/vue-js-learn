@@ -17,7 +17,7 @@
   
   <script>
     export default {
-      name: "TodoView",
+      name: "TodoComponent",
       data(){
         return{
           items: localStorage.itemlist !== null ? JSON.parse(localStorage.itemlist) : [],
