@@ -20,10 +20,13 @@
       name: "TodoComponent",
       data(){
         return{
-          items: localStorage.itemlist !== undefined ? JSON.parse(localStorage.itemlist) : [],
+          items: JSON.parse(localStorage.itemlist),
           item: '',
           error: ''
         }
+      },
+      beforeCreate(){
+        if(localStorage.itemlist === undefined) localStorage.itemlist = JSON.stringify([]);
       },
       methods:{
         addItem(){
