@@ -20,7 +20,7 @@
       name: "TodoComponent",
       data(){
         return{
-          items: window.localStorage.itemlist !== null ? JSON.parse(window.localStorage.itemlist) : [],
+          items: localStorage.itemlist !== undefined ? JSON.parse(localStorage.itemlist) : [],
           item: '',
           error: ''
         }
@@ -33,11 +33,11 @@
           }
           this.error = "";
           this.items.push(this.item);
-          window.localStorage.itemlist = JSON.stringify(this.items);
+          localStorage.itemlist = JSON.stringify(this.items);
         },
         removeItem(index){
           this.items.splice(index, 1);
-          window.localStorage.itemlist = JSON.stringify(this.items);
+          localStorage.itemlist = JSON.stringify(this.items);
         }
       }
     }
