@@ -4,7 +4,7 @@
         <label for="numbersCount">Počet čísel:</label>
         <input type="number" id="numbersCount" v-model="input_number" class="form-control" placeholder="Počet čísel" @change="checkNumber()"/>
         <label for="operator">Vyber matematickou operaci:</label>
-        <select id="operator" @change="()=>{result = null}" v-model="operator" class="form-select">
+        <select id="operator" @change="()=>{calc()}" v-model="operator" class="form-select">
             <option value="0">+</option>
             <option value="1">-</option>
             <option value="2">*</option>
